@@ -13,12 +13,12 @@ const connect = "postgress://jordanfalcon:11268955@localhost/blogposts";
 // Assign Dust engine to .dust file
 app.engine('dust', cons.dust);
 
-// app.set('port', (process.env.Port || 8080));
+app.set('port', (process.env.Port || 8080));
 
-//server
-// app.listen(app.get('port'), function () {
-// 	console.log('Node app is running on port', app.get('port'));
-// });
+// server
+app.listen(app.get('port'), function () {
+	console.log('Node app is running on port', app.get('port'));
+});
 
 //set default Ext .dust
 app.set('view engine', 'dust');
