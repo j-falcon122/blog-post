@@ -1,0 +1,14 @@
+{
+  "development": {
+    "dialect": "postgres",
+    "username": "jord",
+    "password": "",
+    "database": "falcon-blog"
+  },
+  "production": {
+ "dialect": "postgres",
+    "username": "jord",
+    "password": "",
+    "database": "falcon-blog"
+  }
+}
