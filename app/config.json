@@ -6,9 +6,8 @@
     "database": "falcon-blog"
   },
   "production": {
- "dialect": "postgres",
-    "username": "jord",
-    "password": "",
-    "database": "falcon-blog"
+    "redisPort": 6379,
+    "redisHost": "46.137.195.230",
+    "errorHandlerOptions": {"dumpExceptions": false, "showStack": false}
   }
 }
