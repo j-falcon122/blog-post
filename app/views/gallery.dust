@@ -1,0 +1,143 @@
+{>"layout" /}
+
+
+    <link rel="stylesheet" type="text/css" href="/css/js-image-slider.css">
+    <link rel="stylesheet" type="text/css" href="/css/gallery.css">
+
+<!-- Slideshow -->
+<div class="img-vid-container" id="img-container">
+    <div class="responsive-img" id="slide-container">
+        <div class="slideshow-container">
+        <h2 class="headline">Images</h2> 
+            <img class="slideshow" id="slide" src="img/gallery/profile1.jpg" alt="fb1">
+            <div class="slideshow" id="slides">
+                <img src="img/gallery/profile2.jpg" alt="fb2">
+                <img src="img/gallery/profile3.jpg" alt="fb3">
+                <img src="img/gallery/profile4.jpg" alt="fb4">
+                <img src="img/gallery/profile5.jpg" alt="fb5">
+            </div>
+        </div>
+   </div>
+
+    <!-- Videos -->
+
+    <h2 class="headline" >Videos</h2>
+    <div  class="responsive-vid" id="sliderFrame">
+
+        <div id="slider">
+            <video preload="none" data-image="img/gallery/salsa1.png" controls>
+                <source data-src="img/gallery/salsa1.mp4" type="video/mp4" />
+            </video>
+            <video preload="none" data-image="img/gallery/salsa2.png"   controls>
+                <source data-src="img/gallery/salsa2.mp4" type="video/mp4" />
+            </video>
+            <video preload="none" data-image="img/gallery/salsa3.png" controls>
+                <source data-src="img/gallery/salsa3.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <!-- thumbnails -->
+        <div id="thumbs" data-autovideo="true">
+            <div class="thumb">
+                <img src="img/gallery/salsa1.png" />
+                <div class="playvideo"></div>
+            </div>
+            <div class="thumb">
+                <img src="img/gallery/salsa2.png"/>
+                <div class="playvideo"></div>
+            </div>
+            <div class="thumb">
+                <img src="img/gallery/salsa3.png" />
+                <div class="playvideo"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- Gallery -->
+<h2 class="headline">Gallery</h2>
+<div class="gal-container">
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img/gallery/group1.jpg">
+          <img class="gal-image" src="img/gallery/group1.jpg" alt="ADC 2015">
+        </a>
+        <div class="desc">All White</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img/gallery/group2.jpg">
+          <img class="gal-image" src="img/gallery/group2.jpg" alt="ADC 2016">
+        </a>
+        <div class="desc">Beach Party</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="iimg/gallery/group3.jpg">
+          <img class="gal-image" src="img/gallery/group3.jpg" alt="NYTimes">
+        </a>
+        <div class="desc">New York Times</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img/gallery/group4.jpg">
+          <img class="gal-image" src="img/gallery/group4.jpg" alt="Flatiron">
+        </a>
+        <div class="desc">Flatiron School</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+            <a target="_blank" href="img/gallery/group5.jpg">
+              <img class="gal-image" src="img/gallery/group5.jpg" alt="Bros">
+            </a>
+            <div class="desc">The Bros</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img/gallery/background1.jpg">
+          <img class="gal-image" src="img/gallery/background1.jpg" alt="Miami Beach">
+        </a>
+        <div class="desc">Miami Beach</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img/gallery/background2.jpg">
+          <img class="gal-image" src="img/gallery/background2.jpg" alt="NYC">
+        </a>
+        <div class="desc">NYC</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img/gallery/background3.jpg">
+          <img class="gal-image" src="img/gallery/background3.jpg" alt="Quote">
+        </a>
+        <div class="desc">Quote</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="img/gallery/background4.jpg">
+          <img class="gal-image" src="img/gallery/background4.jpg" alt="Falcon">
+        </a>
+        <div class="desc">Falcon</div>
+      </div>
+    </div>
+
+</div>

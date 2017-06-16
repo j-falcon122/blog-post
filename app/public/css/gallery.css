@@ -1,0 +1,173 @@
+
+div.gallery {
+    /*display: inline;*/
+    margin: auto;
+    /*border: 1px solid #ccc;*/
+}
+
+div.gallery:hover {
+    opacity: 0.75;
+}
+
+div.gallery img {
+  margin: 0 auto;
+      margin-left: 17px;
+    margin-right: 17px;
+    width: 350px;
+    height: 300px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+
+     margin: 0 auto;
+    float: left;
+    margin: auto;
+}
+
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.headline {
+    font-family: Georgia;
+    color: white ;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.gal-container {   
+    margin: 0 auto;
+    width: 90%;
+    height: 500px;
+    overflow-y: scroll;
+    margin-bottom: 50px;
+}
+
+.slideshow-container {
+  
+    text-align: center;
+    width: 500px
+    height:auto;
+    float: left;  /*float left */
+
+}
+.slideshow-container h1, h2, ul, p {
+  color: black;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+}
+.slideshow-container h1 {
+  padding-bottom: .25em;
+
+}
+.slideshow-container h2{
+  /*font-size: 1.2em;*/
+  margin: auto;
+  padding: .5em 0;
+
+}
+.slideshow {
+
+  height:100%;
+  width: 100%;
+
+}
+.slideshow-container img {
+  border-radius: 10px;
+  border-radius: 10px;
+  border: 5px solid black;
+  width: 500px;
+  height: 306px;
+}
+#slides img {
+  display: none;
+}
+
+.img-vid-container {
+  display: inline-block;
+  margin-left: 5%;
+  width: 90%;
+}
+
+
+@media only screen and (max-width: 1150px){
+  .img-vid-container {
+    display: inline-block;
+    margin: auto; 
+    width: 100%;
+  }    
+  .slideshow-container {
+  display: inline-block;
+  margin-left: 5%;
+  width: 90%;
+    float: left;  /*float left */
+}
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+    .repsonsive-img {
+      margin: auto;
+    }
+    .responsive-vid{
+      margin: auto;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .img-vid-container {
+      display: inline-block;
+      margin: auto; 
+      width: 100%;
+    }
+    #sliderFrame {
+    margin: inherit;
+    width: 100%;
+    float: right;
+  } 
+    .responsive {
+        width: 100%;
+    }
+    .repsonsive-img {
+      margin: auto;
+    }
+    .responsive-vid{
+      margin: auto;
+    }
+}
+@media only screen and (max-width: 300px){
+    .img-vid-container {
+      display: inline-block;
+      margin: auto; 
+      width: 1000%;
+    }
+    #sliderFrame {
+    margin: inherit;
+    width: 100%;
+    float: right;
+  } 
+    .responsive {
+        width: 100%;
+    }
+    .repsonsive-img {
+      margin: auto;
+    }
+    .responsive-vid{
+      margin: auto;
+    }
+}
+
+

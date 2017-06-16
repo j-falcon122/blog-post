@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio</title>
+	
+	<link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="/bootstrap-social-gh-pages/bootstrap-social.css">
+	<link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/css/template.css">
+	<link rel="stylesheet" type="text/css" href="/css/nav.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+			{>"header" /}
+<body>
+
+<div class="container body-cont">
+
+		{+body /}
+
+</div>
+<footer class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li class="active nav-li social-buttons">
+	            <a  href="https://www.facebook.com/jordan.falcon.96?ref=bookmarks" class="btn btn-social-icon btn-facebook">
+	                <span class="fa fa-facebook"></span>
+	            </a>
+            </li>
+            <li class="active nav-li social-buttons">
+	            <a  href="https://www.linkedin.com/in/jordanfalcon/" class="btn btn-social-icon btn-linkedin">
+	                <span class="fa fa-linkedin"></span>
+	            </a>
+            </li> 
+            <li class="active nav-li social-buttons">
+	            <a  href="https://github.com/j-falcon122" class="btn btn-social-icon btn-github">
+	                <span class="fa fa-github"></span>
+	            </a>
+            </li>
+        </ul>
+    </footer>
+</body>	
+
+
+<script src="../js/bootstrap.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/contact.js"></script>
+<script src="../js/gallery.js"></script>
+<script src="../js/js-image-slider.js"></script>
+<script src="../js/mcVideoPlugin.js"></script>
+</body>
+</html>	

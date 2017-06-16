@@ -1,0 +1,104 @@
+
+h1 {
+	color: white ;
+}
+.headline {
+	font-family: Georgia;
+	color: white ;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+p {
+	line-height: 19px
+}
+
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+   text-decoration: underline; :none
+}
+
+.profile {
+	background-color: #92bafc;
+	margin: auto;
+	text-align: center;
+	width: 60%;
+	height: 390px;
+	padding-top: 30px;	
+	margin-bottom: 30px;
+}
+.profile .diamond {
+	float: left;
+}
+.profile p{
+	float: right;
+	text-align: center;
+	background-color: navy;
+	color: white;
+	font-style: italic;
+	margin-right: 5%;
+	margin-top: 30px;
+	width: 200px;
+  	height: auto;
+  	padding: 10px;
+}
+
+
+.diamond, .dia {
+/*  margin: 0 auto;*/
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+}
+.diamond {
+	/*display:inline-block;*/
+	margin-left: 8%;
+  transform: rotate(45deg) translateY(-25px) translateX(-25px);
+}
+.diamond .dia {
+  width: 380px;
+  height: 380px;
+  transform: rotate(-45deg);
+}
+.diamond img {
+	float: left;
+  width: 100%;
+  height: auto;
+}
+
+
+
+.projects {
+	/*background-color: #92bafc;
+    display: inline-flex;	
+	/*margin: auto;*/
+    /*width: 60%;*/
+    /*height: 300px; */
+    padding-top: 40px;
+	text-align: center
+}
+#project-title{
+	text-align: center;
+	color: white;
+
+}
+.projects figure{
+	display: inline-block;
+	margin-right: 50px;
+}
+
+.projects figcaption{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	color: white;
+	font-size: 1.2em;
+}
+
+
+
+

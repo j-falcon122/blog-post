@@ -1,0 +1,47 @@
+{>"layout" /}
+
+<head>      
+    <link rel="stylesheet" type="text/css" href="/css/contact.css">
+</head>
+
+
+    <div class="contact-container">
+      <form action="#" onsubmit="return validateFormOnSubmit(this);">
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name...">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+        
+        <label for="phoneNumber">Phone Number</label>
+        <input type="number" id="phoneNumber" name="phoneNumber" placeholder="Your number..">
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email..">
+
+        <label for="reason">Reason</label>
+        <textarea id="reason" name="reason" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+
+      </form>
+    </div>
+
+        <footer class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li class="active nav-li social-buttons"><a  href="https://www.facebook.com/jordan.falcon.96?ref=bookmarks" class="btn btn-social-icon btn-facebook">
+                <span class="fa fa-facebook"></span>
+            </a>
+            </li>
+            <li class="active nav-li social-buttons"><a  href="https://www.linkedin.com/in/jordanfalcon/" class="btn btn-social-icon btn-linkedin">
+                <span class="fa fa-linkedin"></span>
+            </a>
+            </li> 
+            <li class="active nav-li social-buttons"><a  href="https://github.com/j-falcon122" class="btn btn-social-icon btn-github">
+                <span class="fa fa-github"></span>
+            </a>
+            </li>
+        </ul>
+    </footer>
+

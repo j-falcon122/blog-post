@@ -1,0 +1,13 @@
+	<div id="navbar" class="navbar-collapse collapse">
+	        <ul class="nav navbar-nav">
+	        	<li class="pages spaces"></li>
+	            <li class="active nav-li"><a class="pages" href="index">Home</a></li>
+	            <li class="pages spaces">|</li>
+	           	<li class="active nav-li"><a class="pages" href="blog">Blog</a></li>
+	            <li class="pages spaces">|</li>
+	            <li class="active nav-li"><a class="pages" href="gallery">Gallery</a></li>
+	            <li class="pages spaces">|</li>
+	            <li class="active nav-li"><a class="pages" href="contact">Contact</a></li>
+	            <li class="pages spaces"></li>
+	      	</ul>
+    </div>
