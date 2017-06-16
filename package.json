@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "falcon-blogs",
   "version": "1.0.0",
   "description": "Blog Posts",
   "main": "app.js",
