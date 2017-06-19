@@ -7,7 +7,7 @@
 
 <h2 class="headline ">Web Developer</h2>	
 
-<div class="profile">
+<div class="profile responsive">
  	<div class="diamond">
       <div class="dia">
         <img class="profile-image" src="img/profile-img.png" alt="" width="320" height="316" />

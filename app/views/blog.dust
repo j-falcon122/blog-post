@@ -8,12 +8,12 @@
 	<br />
 	{#blogposts}
 		<div class="well">
-			<h4>{name} <button class="btn btn-default pull-right" data-toggle="collapse" href="#blogposts_{id}" aria-expanded="false" aria-controls="blogposts_{id}">
+			<h4>{name} <button class="btn btn-default pull-right" data-toggle="collapse" href="#{blogpost_id}" aria-expanded="false" aria-controls="{blogpost_id}">
 
 			<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
 			</button></h4>
 
-			<div class="collapse" id="blogposts_{id}">
+			<div class="collapse" id="{blogpost_id}">
 				<br />
 				<br />
 				<p><strong>Posts</strong><br>{posts}</p>
@@ -21,11 +21,11 @@
 				<br />
 				<br />
 				<!-- Edit Button -->
-				<button class="btn btn-default edit-blogpost" data-target="#editFormModal" data-id="{id}" data-name="{name}" data-posts="{posts}"  data-toggle="modal" >
+				<button class="btn btn-default edit-blogpost" data-target="#editFormModal" data-id="{blogpost_id}" data-name="{name}" data-posts="{posts}"  data-toggle="modal" >
 				<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
 				</button>
 				<!-- Delete Button -->
-				<button class="btn btn-danger delete-blogpost" data-id="{id}">
+				<button class="btn btn-danger delete-blogpost" data-id="{blogpost_id}">
 				<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 				</button>
 			</div>

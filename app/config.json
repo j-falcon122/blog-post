@@ -1,12 +1,12 @@
 {
   "development": {
     "dialect": "postgres",
-    "username": "jord",
+    "username": "jord",	
     "password": "",
     "database": "falcon-blog"
   },
   "production": {
-    "redisPort": 6379,
+    "Port": 6379,
     "redisHost": "46.137.195.230",
     "errorHandlerOptions": {"dumpExceptions": false, "showStack": false}
   }

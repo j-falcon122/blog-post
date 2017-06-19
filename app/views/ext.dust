@@ -1,0 +1,14 @@
+<button class="btn btn-success add-comment" data-toggle="collapse" href="#comments_{id}" aria-expanded="false" aria-controls="comments_{id}">
+<span aria-hidden="true"> Add comment</span>
+</button>
+
+
+
+					<div class="com-cont collapse" id="comments_{id}">
+<form>
+	<textarea class="form-control" placeholder="sample comment">
+		
+	</textarea>
+<input type="submit" class="btn btn-primary" value="Submit"/>
+</form>
+</div>	

@@ -3,11 +3,11 @@ const path = require('path');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const cons = require('consolidate');
-const dust = require('dustjs-helpers');
+const dust = require('dustjs-helpers')
 const pg = require('pg');
 const app = express();
-const port = process.env.PORT || 8080;
-//DB connection string
+// const port = process.env.PORT || 8080;
+//DB connectStrion string
 const connect = "postgress://jordanfalcon:11268955@localhost/blogposts";
 
 // Assign Dust engine to .dust file
@@ -62,7 +62,7 @@ app.get('/blog', function(req, res){
 		}
 		client.query('SELECT * FROM blogposts', function(err, result){
 		if (err){
-			return console.error('error runniny query', err);
+			return console.error('error running query', err);
 		}
 	res.render('blog', {blogposts: result.rows});
 	});
@@ -88,11 +88,11 @@ app.delete('/delete/:id', function(req, res){
 		if(err) {
 			return console.error('error fetching client from pool', err);
 		}
-		client.query("DELETE FROM blogposts WHERE id = $1",
+		client.query("DELETE FROM blogposts WHERE blogpost_id = $1",
 		[req.params.id]);
 		done();
-		res.redirect(200, '/blog');
-	});
+		res.send(200);
+	});	
 });
 
 app.post('/edit', function(req, res){
@@ -100,7 +100,7 @@ app.post('/edit', function(req, res){
 		if(err) {
 			return console.error('error fetching client from pool', err);
 		}
-		client.query("UPDATE blogposts SET name = $1, posts = $2 WHERE id = $3", 
+		client.query("UPDATE blogposts SET name = $1, posts = $2 WHERE blogpost_id = $3", 
 			[req.body.name, req.body.posts, req.body.id]);
 		done();
 		res.redirect('/blog');
