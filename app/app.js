@@ -7,8 +7,26 @@ const dust = require('dustjs-helpers')
 const pg = require('pg');
 const app = express();
 // const port = process.env.PORT || 8080;
-//DB connectStrion string
-const connect = "postgress://jordanfalcon:11268955@localhost/blogposts";
+
+//DB connectStrion string locally
+
+// const connect = "postgress://jordanfalcon:11268955@localhost/blogposts";
+
+//DB connectStrion string production
+
+pg.defaults.ssl = true;
+pg.connect(process.env.DATABASE_URL, function(err, client) {
+  if (err) throw err;
+  console.log('Connected to postgres! Getting schemas...');
+
+  client
+    .query('SELECT table_schema,table_name FROM blogposts.tables;')
+    .on('row', function(row) {
+      console.log(JSON.stringify(row));
+    });
+});
+
+
 
 // Assign Dust engine to .dust file
 app.engine('dust', cons.dust);

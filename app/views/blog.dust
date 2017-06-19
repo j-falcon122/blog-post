@@ -17,7 +17,6 @@
 				<br />
 				<br />
 				<p><strong>Posts</strong><br>{posts}</p>
-				<p><strong>Comments</strong><br>{comments}</p>
 				<br />
 				<br />
 				<!-- Edit Button -->
