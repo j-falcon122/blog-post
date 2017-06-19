@@ -11,7 +11,7 @@ const app = express();
 //DB connectStrion string locally
 
 // const connect = "postgress://jordanfalcon:11268955@localhost/blogposts";
-// const connect = "postgress://jordanfalcon:11268955@localhost/blogposts";
+const connect = process.env.DATABASE_URL;
 
 //DB connectStrion string production
 
