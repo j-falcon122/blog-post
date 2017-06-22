@@ -11,9 +11,9 @@ const app = express();
 //DB connectStrion string locally
 
 // const connect = "postgress://jordanfalcon:11268955@localhost/blogposts";
-const connect = process.env.DATABASE_URL;
 
 //DB connectStrion string production
+const connect = process.env.DATABASE_URL;
 
 pg.defaults.ssl = true;
 pg.connect(process.env.DATABASE_URL, function(err, client) {
