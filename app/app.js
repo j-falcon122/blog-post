@@ -7,7 +7,7 @@ const dust = require('dustjs-helpers')
 const pg = require('pg');
 const app = express();
 const passport = require('passport');
-const passportConfig = require('./config/passport')
+
 // const port = process.env.PORT || 8080;
 
 //DB connectString string - local
