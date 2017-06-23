@@ -7,7 +7,7 @@ Personal portfolio linked to blog.
 ## Screenshots
 
 Add some spiffy screenshots of your app here.
-![Alt text](/relative/path/to/screenshot.png?raw=true "Index")
+![Alt text](/app/public/img/screenshot.png?raw=true "Index")
 
 ## Background
 
