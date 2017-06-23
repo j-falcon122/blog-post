@@ -6,7 +6,6 @@ Personal portfolio linked to blog.
 
 ## Screenshots
 
-Add some spiffy screenshots of your app here.
 ![Alt text](/app/public/img/screenshot.png?raw=true "Index")
 
 ## Background
@@ -15,10 +14,11 @@ Wanted a professional place to display projects I've created. Also show some wor
 
 ## Features
 
-Gallery
-Video Slider
-Blog
-Contact Form
+
+* Gallery
+* Video Slider
+* Blog
+* Contact Form
 
 ## Usage
 
