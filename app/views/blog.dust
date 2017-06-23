@@ -2,13 +2,13 @@
 	
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 {<body}
-	<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#formModal">
+	<button type="button" id="addPostButton" class="btn btn-primary btn-block role-admin" data-toggle="modal" data-target="#formModal">
 	Add Post
 	</button>
 	<br />
 	{#blogposts}
-		<div class="well">
-			<h4>{name} <button class="btn btn-default pull-right" data-toggle="collapse" href="#{blogpost_id}" aria-expanded="false" aria-controls="{blogpost_id}">
+		<div class="well showMore">
+			<h4>{name} <button class="btn btn-default pull-right " data-toggle="collapse" href="#{blogpost_id}" aria-expanded="false" aria-controls="{blogpost_id}">
 
 			<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
 			</button></h4>
@@ -20,13 +20,15 @@
 				<br />
 				<br />
 				<!-- Edit Button -->
-				<button class="btn btn-default edit-blogpost" data-target="#editFormModal" data-id="{blogpost_id}" data-name="{name}" data-posts="{posts}"  data-toggle="modal" >
-				<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-				</button>
-				<!-- Delete Button -->
-				<button class="btn btn-danger delete-blogpost" data-id="{blogpost_id}">
-				<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-				</button>
+				<div class="controls">
+					<button class="btn btn-default edit-blogpost role-admin" data-target="#editFormModal" data-id="{blogpost_id}" data-name="{name}" data-posts="{posts}"  data-toggle="modal" >
+					<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+					</button>
+					<!-- Delete Button -->
+					<button class="btn btn-danger delete-blogpost role-admin" data-id="{blogpost_id}">
+					<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+				</div>
 			</div>
 		</div>
 	{/blogposts}
@@ -69,7 +71,7 @@
 	    	<input type="hidden" id="edit-form-id" name="id" />
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="myModalLabel">Add Post</h4>
+		        <h4 class="modal-title" id="myModalLabel">Edit Post</h4>
 		      </div>
 		      <div class="modal-body">
 		        <div class="form-group">

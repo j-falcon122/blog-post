@@ -23,20 +23,20 @@ $(document).ready(function(){
 		$('#edit-form-id').val($(this).data('id'));
 	});
 	
-	$(function(){
+	// $(function(){
 
-	  $(".comments-link").on("click", function( event ){
-	    event.preventDefault();                // Prevents browser following #hash 
-	    $(this).hide();                        // hide the button
-	    $(".comment-form-container").show();   // Show the form parent
-	  });
+	//   $(".comments-link").on("click", function( event ){
+	//     event.preventDefault();                // Prevents browser following #hash 
+	//     $(this).hide();                        // hide the button
+	//     $(".comment-form-container").show();   // Show the form parent
+	//   });
 
-	  $(".comment-form-container form").on("submit", function( event ){
-	      event.preventDefault();              // Don't send headers
-	      alert( $(this).serialize() +"\nWILL BE SENT TO PHP" );
-	     // $.ajax stuff
-	  });
+	//   $(".comment-form-container form").on("submit", function( event ){
+	//       event.preventDefault();              // Don't send headers
+	//       alert( $(this).serialize() +"\nWILL BE SENT TO PHP" );
+	//      // $.ajax stuff
+	//   });
 
-	});
+	// });
 });
 

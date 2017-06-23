@@ -1,3 +1,25 @@
 body {
 	background: #2659ad url(/img/background2.jpg) top left repeat-y;
 }
+
+.login-img{
+	width: 100px;
+	height: 100px;
+
+}
+
+#adminImg {
+	float: left;
+	margin-left: 80px;
+	margin-right: 15px;
+}
+
+#guestImg {
+	float: right;
+	margin-left: 15px;
+	margin-right: 80px;
+}
+
+#loginImageContainer {
+	text-align: center;
+}

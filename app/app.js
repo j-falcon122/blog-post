@@ -6,17 +6,19 @@ const cons = require('consolidate');
 const dust = require('dustjs-helpers')
 const pg = require('pg');
 const app = express();
+const passport = require('passport');
+const passportConfig = require('./config/passport')
 // const port = process.env.PORT || 8080;
 
-//DB connectStrion string locally
+//DB connectString string - local
 
-// const connect = "postgress://jordanfalcon:11268955@localhost/blogposts";
+const connect = "postgress://jordanfalcon:11268955@localhost/blogposts";
 
-//DB connectStrion string production
-const connect = process.env.DATABASE_URL;
+//DB connectString string - production
+// const connect = process.env.DATABASE_URL;
+// pg.defaults.ssl = true;
 
-pg.defaults.ssl = true;
-pg.connect(process.env.DATABASE_URL, function(err, client) {
+pg.connect(connect, function(err, client) {
   if (err) throw err;
   console.log('Connected to postgres! Getting schemas...');
 
@@ -97,6 +99,17 @@ app.post('/add', function(req, res){
 			return console.error('error fetching client from pool', err);
 		}
 		client.query("INSERT INTO blogposts(name, posts) VALUES($1, $2)", [req.body.name, req.body.posts]);
+		done();
+		res.redirect('/blog');
+	});
+});
+
+app.post('/login', function(req, res){
+	pg.connect(connect, function(err, client, done){
+		if(err) {
+			return console.error('error fetching client from pool', err);
+		}
+		client.query("SELECT FROM user(username, password) VALUES($1, $2)", [req.body.username, req.body.password]);
 		done();
 		res.redirect('/blog');
 	});

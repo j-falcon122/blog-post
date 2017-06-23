@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="/css/template.css">
+	<link rel="stylesheet" type="text/css" href="/css/blog.css">
 	<link rel="stylesheet" type="text/css" href="/css/nav.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -21,6 +22,65 @@
 		{+body /}
 
 </div>
+
+	<!-- Login Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal">
+		<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	    	<form method="post" action="/edit">
+	    	<input type="hidden" id="edit-form-id" name="id" />
+
+		      <div class="modal-body">
+		        <div class="form-group">
+			        <div id="loginImageContainer">
+			        <figure id="adminImg">
+			        	<a href="#" data-dismiss="modal"><img class="login-img"  src="../img/admin.png"></a>
+			        	<figcaption class="login-caption"> Admin</figcaption>
+			        </figure>
+			        <img class="login-img"  src="../img/vertical-line.png">
+			        <figure id="guestImg">
+			        	<a href="#" data-dismiss="modal"><img class="login-img" src="../img/guest.png"></a>
+			        	<figcaption class="login-caption" >Guest</figcaption>
+			        </figure>
+						
+			        </div>
+		        </div>
+		      </div>
+
+	      </form>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Admin Modal -->
+	<div class="modal fade" id="adminModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	    	<form method="post" action="/login">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Login</h4>
+		      </div>
+		      <div class="modal-body">
+		        <div class="form-group">
+		        	<label>Username</label>
+		        	<input type="text" class="form-control" name="username" placeholder="username..." required />
+		        </div>
+		       	<div class="form-group">
+		        	<label>Password</label>
+
+		        	<input type="text" class="form-control" name="password" placeholder="password.." required />
+		        </div>
+		      </div>
+		      <div class="modal-footer">
+		        <button id="adminGuestButton" type="button" class="btn btn-success" data-dismiss="modal">Guest</button>
+		        <input type="submit" class="btn btn-primary" value="Save changes"/>
+	      </div>
+	      </form>
+	    </div>
+	  </div>
+	</div>
+
 <footer class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
             <li class="active nav-li social-buttons">
@@ -42,7 +102,7 @@
     </footer>
 </body>	
 
-
+<script src="../js/main.js"></script>
 <script src="../js/bootstrap.js"></script>
 <script src="../js/blog.js"></script>
 <script src="../js/contact.js"></script>
