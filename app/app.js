@@ -17,12 +17,12 @@ const 	express = require('express'),
 
 //DB connectString string - local
 
-const connect = "postgress://jordanfalcon:11268955@localhost/blogposts";
+// const connect = "postgress://jordanfalcon:11268955@localhost/blogposts";
 
 //DB connectString string - production
 
-// const connect = process.env.DATABASE_URL;
-// pg.defaults.ssl = true;
+const connect = process.env.DATABASE_URL;
+pg.defaults.ssl = true;
 
 pg.connect(connect, function(err, client) {
   if (err) throw err;
