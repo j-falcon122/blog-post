@@ -4,7 +4,7 @@
   "description": "Blog Posts",
   "main": "app.js",
   "engines": {
-    "node": "8.1.2"
+    "node": "8.11.1"
   },
   "scripts": {
     "start:dev": "nodemon ./bin/www",
