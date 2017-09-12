@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$("#adminLogin").on('click', function(e){
+	e.preventDefault();
 	var admin = false;
     $('#loginModal').modal('show');
 
@@ -29,6 +30,22 @@ $(document).ready(function(){
 		}
 	});
 
-
-
 });
+$('#form-login').on('submit', function(e){
+	e.preventDefault();
+	alert("login!")
+	var url = '/login/';
+	$.ajax({
+			url: url,
+			type: 'POST', 
+			success: function(result){
+				// console.log('Deleting Post...');
+				window.location.href='/blog';
+			},
+			error: function(err){
+				console.log(err);
+			}
+	})
+});
+
+

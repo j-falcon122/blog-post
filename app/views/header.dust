@@ -1,13 +1,42 @@
-	<div id="navbar" class="navbar-collapse collapse">
-	        <ul class="nav navbar-nav">
-	        	<li class="pages spaces"></li>
-	            <li class="active nav-li"><a class="pages" href="index">Home</a></li>
-	            <li class="pages spaces">|</li>
-	           	<li class="active nav-li"><a class="pages" href="blog">Blog</a></li>
-	            <li class="pages spaces">|</li>
-	            <li class="active nav-li"><a class="pages" href="gallery">Gallery</a></li>
-	            <li class="pages spaces">|</li>
-	            <li class="active nav-li"><a class="pages" href="contact">Contact</a></li>
-	            <li class="pages spaces"></li>
-	      	</ul>
+<div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+        	<li class="pages spaces"></li>
+            <li class="active nav-li"><a class="pages" href="index">Home</a></li>
+            <li class="pages spaces">|</li>
+           	<li class="active nav-li"><a class="pages" href="blog">Blog</a></li>
+            <li class="pages spaces">|</li>
+           <!--  <li class="active nav-li"><a class="pages" href="gallery">Gallery</a></li>
+            <li class="pages spaces">|</li> -->
+            <li class="active nav-li"><a class="pages" href="contact">Contact</a></li>
+            <li class="pages spaces"></li>
+      	</ul>
+        <ul class="nav navbar-nav social">
+            <li class="active nav-li social-buttons">
+                <a  href="https://www.facebook.com/jordan.falcon.96?ref=bookmarks" target="_blank" class="btn btn-social-icon btn-facebook">
+                    <span class="fa fa-facebook"></span>
+                </a>
+            </li>
+            <li class="active nav-li social-buttons">
+                <a  href="https://www.linkedin.com/in/jordanfalcon/" target="_blank" class="btn btn-social-icon btn-linkedin">
+                    <span class="fa fa-linkedin"></span>
+                </a>
+            </li> 
+            <li class="active nav-li social-buttons">
+                <a  href="https://github.com/j-falcon122" target="_blank" class="btn btn-social-icon btn-github">
+                    <span class="fa fa-github"></span>
+                </a>
+            </li>
+            <a id="adminLogin" href="">
+                <div class="span4 proj-div" data-toggle="modal" data-target="#GSCCModal"><i id="log-in-icon" data-feather="log-in"></i></div>
+            </a>
+        </ul>
+    <!-- example icon -->
+
+    
+
+    <script>
+      feather.replace()
+    </script>
     </div>
+
+

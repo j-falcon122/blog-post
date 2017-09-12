@@ -8,33 +8,42 @@
 <h2 class="headline ">Web Developer</h2>	
 
 <div class="profile responsive">
- 	<div class="diamond">
-      <div class="dia">
-        <img class="profile-image" src="img/profile-img.png" alt="" width="320" height="316" />
-     	</div>
+ 	<div id="profile-image--main" class="diamond">
+      <div id="profile-image--sub" class="dia">
+            <img class="profile-image" src="img/profile-img.png" alt="" width="320" height="316" />
+    	</div>
 	</div>
-
-	<p>Experienced Field Specialist with a demonstrated history of working in the retail industry. Skilled in Sales, Retail, RSpec, Ruby on Rails, and Public Speaking. Strong operations professional with a Bachelor of Applied Science (B.A.Sc.) focused in Computer Science from City University of New York-Herbert H. Lehman College. 
-	</p>
 </div>
 
 		
 <h3 class="headline"> Some Projects</h3>	
-<div class="projects">
-	<figure>
-	<a href="https://baconeggcheese-b7736.firebaseapp.com/html/corky-home.html">
-	  <img src=" img/corky-diner.png" alt="Corky's Diner" width="304" height="228">
-	 </a>	
-	  <figcaption>Corky's Diner</figcaption>
-	</figure>
-	<figure>
-	<a href="http://stockoverflow.herokuapp.com/">
-		<img src=" img/stock-overflow.png" alt="Stock Overflow" width="304" height="228">
-	</a>
-	<figcaption>Stock Overflow</figcaption>
-	</figure>
+<ul class="projects">
+	<li class=project>
+		<figure>
+			<a href="https://baconeggcheese-b7736.firebaseapp.com/html/corky-home.html" target="_blank">
+			  <img src=" img/corky-diner.png" alt="Corky's Diner" class="project-img">
+			 </a>	
+		  	<figcaption>Corky's Diner</figcaption>
+		</figure>
+	</li>
+	<li class=project>
+		<figure>
+			<a href="http://stockoverflow.herokuapp.com/" target="_blank">
+				<img src=" img/stock-overflow.png" alt="Stock Overflow" class="project-img">
+			</a>
+			<figcaption>Stock Overflow</figcaption>
+		</figure>
+	</li>
+	</li>
+	<li class=project>
+		<figure>
+			<a href="https://flatiron-twork.herokuapp.com" target="_blank">
+				<img src=" img/twork-screenshot.png" alt="Stock Overflow" class="project-img">
+			</a>
+			<figcaption>Twork</figcaption>
+		</figure>
+	</li>
 
-
-</div>
+</ul>
 
 

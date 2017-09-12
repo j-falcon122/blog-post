@@ -1,8 +1,9 @@
 .nav-li {
 	margin-right: 20px;	
+    font-size: 1.15em;
 }
 #navbar {
-	background-color: #113d84;
+	background-color: #0A3264;
 	margin:0px auto;
 	margin-bottom: 20px;
 	z-index: -1;
@@ -20,15 +21,24 @@
 	margin-bottom: 5px;
 }
 
-footer {
+.social{
 	z-index: 5;
+    float: right;
 	display: block;
-	position:fixed;
+	// position:fixed;
     height:50px;
-    background-color:#92a9ce;
-    bottom:0px;
-    left:0px;
+    // margin-right: 60px;
+    // background-color:#92a9ce;
+    // bottom:0px;
+    // left:0px;
     right:0px;
-    margin-bottom:0px;
-    margin-top: 5px;
+    // margin-bottom:0px;
+    margin-top: 2px;
 }
+#adminLogin{
+    margin-top: 10px; 
+    float: right;  
+    color: white;
+    margin-right: 20px; 
+    height: 2em;
+}   

@@ -23,41 +23,25 @@ a:hover {
 }
 
 .profile {
-	background-color: #92bafc;
-	margin: auto;
-	text-align: center;
-	width: 60%;
+	margin: 0 auto;
+	// text-align: center;
 	height: 390px;
 	padding-top: 30px;	
 	margin-bottom: 30px;
 }
-.profile .diamond {
-	float: left;
-}
-.profile p{
-	float: right;
-	text-align: center;
-	background-color: navy;
-	color: white;
-	font-style: italic;
-	margin-right: 5%;
-	margin-top: 30px;
-	width: 200px;
-  	height: auto;
-  	padding: 10px;
-}
 
+/*
+ * ==== diamond 
+ */
 
 .diamond, .dia {
-/*  margin: 0 auto;*/
+  margin: 0 auto;
   transform-origin: 50% 50%;
   overflow: hidden;
   width: 300px;
   height: 300px;
 }
 .diamond {
-	/*display:inline-block;*/
-	margin-left: 8%;
   transform: rotate(45deg) translateY(-25px) translateX(-25px);
 }
 .diamond .dia {
@@ -66,39 +50,52 @@ a:hover {
   transform: rotate(-45deg);
 }
 .diamond img {
-	float: left;
   width: 100%;
   height: auto;
+}
+
+.diamond:hover {
+    opacity: .7;
 }
 
 
 
 .projects {
-	/*background-color: #92bafc;
-    display: inline-flex;	
-	/*margin: auto;*/
-    /*width: 60%;*/
-    /*height: 300px; */
+    margin-left: 10%;
+    // text-align: center;
+    width: 90%;
+    list-style: none;
     padding-top: 40px;
-	text-align: center
+	// text-align: center;
 }
+
+.project {
+    display: inline;
+    float: left;
+}
+
 #project-title{
 	text-align: center;
-	color: white;
+    color: white;
 
 }
 .projects figure{
-	display: inline-block;
-	margin-right: 50px;
+    margin-right: 25px;
+    margin-left: 25px;
 }
 
 .projects figcaption{
-	margin-top: 10px;
-	margin-bottom: 20px;
-	color: white;
-	font-size: 1.2em;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 1.2em;
 }
 
+.project-img {
+    width: 300px;
+    height: 200px;
+}
 
 
 

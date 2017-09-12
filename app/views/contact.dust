@@ -28,20 +28,4 @@
       </form>
     </div>
 
-        <footer class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-            <li class="active nav-li social-buttons"><a  href="https://www.facebook.com/jordan.falcon.96?ref=bookmarks" class="btn btn-social-icon btn-facebook">
-                <span class="fa fa-facebook"></span>
-            </a>
-            </li>
-            <li class="active nav-li social-buttons"><a  href="https://www.linkedin.com/in/jordanfalcon/" class="btn btn-social-icon btn-linkedin">
-                <span class="fa fa-linkedin"></span>
-            </a>
-            </li> 
-            <li class="active nav-li social-buttons"><a  href="https://github.com/j-falcon122" class="btn btn-social-icon btn-github">
-                <span class="fa fa-github"></span>
-            </a>
-            </li>
-        </ul>
-    </footer>
-
+        

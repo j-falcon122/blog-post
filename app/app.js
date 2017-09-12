@@ -1,22 +1,27 @@
-const express = require('express');
-const path = require('path');
-const logger = require('morgan');
-const bodyParser = require('body-parser');
-const cons = require('consolidate');
-const dust = require('dustjs-helpers')
-const pg = require('pg');
-const app = express();
-const passport = require('passport');
+const 	express = require('express'),
+	path = require('path'),
+	logger = require('morgan'),
+	bodyParser = require('body-parser'),
+	cons = require('consolidate'),
+	dust = require('dustjs-helpers')
+	pg = require('pg'),
+	app = express(),
+	passport = require('passport'),
+	flash = require('connect-flash'),
+	session = require('express-session'),
+	expressValidator = require('express-validator'),
+	LocalStrategy = require('passport-local');
+
 
 // const port = process.env.PORT || 8080;
 
 //DB connectString string - local
 
-// const connect = "postgress://jordanfalcon:11268955@localhost/blogposts";
+const connect = "postgress://jordanfalcon:11268955@localhost/blogposts";
 
 //DB connectString string - production
-const connect = process.env.DATABASE_URL;
-pg.defaults.ssl = true;
+// const connect = process.env.DATABASE_URL;
+// pg.defaults.ssl = true;
 
 pg.connect(connect, function(err, client) {
   if (err) throw err;
@@ -56,6 +61,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function(req, res){
 	
+// Express Sessions
+app.use(session({
+    secret: 'secret',
+    saveUninitialized: true,
+    resave: true
+}));
+
+// Passport init
+app.use(passport.initialize());
+app.use(passport.session());
 	res.render('index');
 })
 
@@ -93,7 +108,7 @@ app.get('/blog', function(req, res){
 
 
 
-app.post('/add', function(req, res){
+app.post('/<login></login>', function(req, res){
 	pg.connect(connect, function(err, client, done){
 		if(err) {
 			return console.error('error fetching client from pool', err);
@@ -104,16 +119,16 @@ app.post('/add', function(req, res){
 	});
 });
 
-app.post('/login', function(req, res){
-	pg.connect(connect, function(err, client, done){
-		if(err) {
-			return console.error('error fetching client from pool', err);
-		}
-		client.query("SELECT FROM user(username, password) VALUES($1, $2)", [req.body.username, req.body.password]);
-		done();
-		res.redirect('/blog');
-	});
-});
+// app.post('/login', function(req, res){
+// 	pg.connect(connect, function(err, client, done){
+// 		if(err) {
+// 			return console.error('error fetching client from pool', err);
+// 		}
+// 		client.query("SELECT FROM user(username, password) VALUES($1, $2)", [req.body.username, req.body.password]);
+// 		done();
+// 		res.redirect('/blog');
+// 	});
+// });
 
 app.delete('/delete/:id', function(req, res){
 	pg.connect(connect, function(err, client, done){
@@ -143,4 +158,61 @@ app.get('*', (req, res) => res.status(200).send({
   message: 'Welcome to the beginning of nothingness.',
 }));
 
+// Express Session
+
+// Express Validator
+app.use(expressValidator({
+  errorFormatter: function(param, msg, value) {
+      var namespace = param.split('.')
+      , root    = namespace.shift()
+      , formParam = root;
+
+    while(namespace.length) {
+      formParam += '[' + namespace.shift() + ']';
+    }
+    return {
+      param : formParam,
+      msg   : msg,
+      value : value
+    };
+  }
+}));
+
+// Connect Flash
+app.use(flash());
+
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+   User.getUserByUsername(username, function(err, user){
+   	if(err) throw err;
+   	if(!user){
+   		return done(null, false, {message: 'Unknown User'});
+   	}
+
+   	User.comparePassword(password, user.password, function(err, isMatch){
+   		if(err) throw err;
+   		if(isMatch){
+   			return done(null, user);
+   		} else {
+   			return done(null, false, {message: 'Invalid password'});
+   		}
+   	});
+   });
+  }));
+
+passport.serializeUser(function(user, done) {
+  done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+  User.getUserById(id, function(err, user) {
+    done(err, user);
+  });
+});
+
+app.post('/login',
+  passport.authenticate('local', {successRedirect:'/', failureRedirect:'/users/login',failureFlash: true}),
+  function(req, res) {
+    res.redirect('/');
+  });
 module.exports = app; 	
