@@ -16,16 +16,17 @@
 				<p><strong>Posts</strong><br>{posts}</p>
 				<br />
 				<br />
-				<!-- Edit Button -->
+				
+				<!-- Edit Button
 				<div class="controls">
 					<button class="btn btn-default edit-blogpost role-admin" data-target="#editFormModal" data-id="{blogpost_id}" data-name="{name}" data-posts="{posts}"  data-toggle="modal" >
 					<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
 					</button>
-					<!-- Delete Button -->
+					Delete Button
 					<button class="btn btn-danger delete-blogpost role-admin" data-id="{blogpost_id}">
 					<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 					</button>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	{/blogposts}
